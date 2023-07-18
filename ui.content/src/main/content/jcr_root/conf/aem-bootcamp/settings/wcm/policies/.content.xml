@@ -346,14 +346,34 @@
             <components jcr:primaryType="nt:unstructured">
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <policy_1689635002064
-                        jcr:lastModified="{Date}2023-07-17T18:06:27.711-05:00"
+                        jcr:lastModified="{Date}2023-07-18T10:09:48.075-05:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="HomePageTemplateGood"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,/libs/fd/af/components/guidefooter,/libs/fd/af/components/guideheader]">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        components="[group:General,group:Adaptive Form,group:AEM Bootcamp Site - Content,group:AEM Bootcamp Site - Form,group:AEM Bootcamp Site - Structure]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2023-07-18T10:15:33.666-05:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
                     </policy_1689635002064>
+                    <policy_1912993414600
+                        jcr:description="Only AEM bootcamp components"
+                        jcr:lastModified="{Date}2023-07-18T10:13:29.779-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="AEM Bootcamp Components"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:AEM Bootcamp Site - Content,group:AEM Bootcamp Site - Form,group:AEM Bootcamp Site - Structure]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2023-07-18T10:15:33.666-05:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1912993414600>
                 </responsivegrid>
             </components>
         </foundation>

@@ -4,7 +4,7 @@
     jcr:primaryType="cq:Template"
     ranking="{Long}1">
     <jcr:content
-        jcr:description="Base Template for AEM BOOTCAMP Sites project."
+        jcr:description="This is Base Template for AEM Bootcamp"
         jcr:primaryType="cq:PageContent"
         jcr:title="Base Template"/>
 </jcr:root>
