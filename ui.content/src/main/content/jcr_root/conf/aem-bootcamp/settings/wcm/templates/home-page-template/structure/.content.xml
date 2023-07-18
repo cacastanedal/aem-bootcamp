@@ -3,11 +3,23 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2023-07-17T18:07:13.303-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-bootcamp/settings/wcm/templates/home-page-template"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="core-components-examples/components/page">
+        sling:resourceType="aem-bootcamp/components/page">
         <root
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <guideheader
+                jcr:created="{Date}2023-07-17T18:06:33.329-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-07-17T18:06:33.329-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Adaptive Form Header"
+                sling:resourceType="fd/af/components/guideheader"/>
+        </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone

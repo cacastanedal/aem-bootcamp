@@ -2,10 +2,11 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:lastModified="{Date}2023-07-14T15:10:45.539-05:00"
+        cq:lastModified="{Date}2023-07-17T18:07:13.303-05:00"
         cq:lastModifiedBy="admin"
-        cq:templateType="/conf/aem-bootcamp/AEM Bootcamp/settings/wcm/template-types/base-template"
+        cq:templateType="/conf/aem-bootcamp/settings/wcm/template-types/base-template"
+        jcr:description="This is Home Page Template for AEM Bootcamp"
         jcr:primaryType="cq:PageContent"
-        jcr:title="BAse Template "
+        jcr:title="Home Page Template"
         status="draft"/>
 </jcr:root>

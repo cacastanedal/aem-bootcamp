@@ -341,4 +341,21 @@
             </page>
         </components>
     </aem-bootcamp>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_1689635002064
+                        jcr:lastModified="{Date}2023-07-17T18:06:27.711-05:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="HomePageTemplateGood"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,/libs/fd/af/components/guidefooter,/libs/fd/af/components/guideheader]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1689635002064>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
 </jcr:root>
