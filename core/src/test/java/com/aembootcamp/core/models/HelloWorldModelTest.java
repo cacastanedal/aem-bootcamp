@@ -15,8 +15,10 @@
  */
 package com.aembootcamp.core.models;
 
+import junit.framework.Assert;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.factory.ModelFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -50,8 +52,11 @@ class HelloWorldModelTest {
         resource = context.create().resource(page, "hello",
             "sling:resourceType", "aem-bootcamp/components/helloworld");
 
+        context.addModelsForClasses(HelloWorldModel.class);
+
         // create sling model
-        hello = resource.adaptTo(HelloWorldModel.class);
+        hello = context.getService(ModelFactory.class).createModel(resource, HelloWorldModel.class);
+
     }
 
     @Test
