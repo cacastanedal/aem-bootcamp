@@ -7,7 +7,6 @@ import com.day.cq.search.result.Hit;
 import com.day.cq.search.result.SearchResult;
 import com.day.cq.wcm.api.Page;
 import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.resource.ResourceNotFoundException;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.OSGiService;
@@ -22,13 +21,12 @@ import javax.jcr.Session;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Model(adaptables = {Resource.class, SlingHttpServletRequest.class}, resourceType = "aem-bootcamp/components/general/footer")
-public class FooterModel {
+public class BreadcrumbModel {
 
-  private static final Logger log = LoggerFactory.getLogger(FooterModel.class);
+  private static final Logger log = LoggerFactory.getLogger(BreadcrumbModel.class);
   @OSGiService
   private QueryBuilder queryBuilder;
 
