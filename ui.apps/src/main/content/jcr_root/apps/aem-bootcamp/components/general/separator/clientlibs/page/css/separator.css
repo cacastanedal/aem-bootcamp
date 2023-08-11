@@ -1,0 +1,77 @@
+/*
+ *  Copyright 2016 Adobe
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+.bootcamp-separator-show-hidden {
+    display:none;
+}
+.bootcamp-separator-show-inline {
+    display:inline;
+}
+
+.cmp-separator__horizontal-rule {
+	background-color: transparent;
+}
+
+.bootcamp-separator-color-gray hr {
+    border-top-color: gray;
+}
+.bootcamp-separator-color-red hr {
+    border-top-color: red;
+
+}
+.bootcamp-separator-color-black hr {
+    border-top-color: black;
+}
+.bootcamp-separator-color-white hr {
+	border-top-color: white;
+}
+
+.bootcamp-separator-color-yellow hr {
+	border-top-color: yellow;
+}
+
+.bootcamp-separator-color-blue hr {
+	border-top-color: blue;
+}
+
+
+.bootcamp-separator-style-dotted hr {
+	border-top-style: dotted;
+}
+
+.bootcamp-separator-style-dashed hr {
+    border-top-style: dashed;
+}
+
+.bootcamp-separator-style-solid hr {
+    border-top-style: solid;
+}
+
+.bootcamp-separator-thickness-thin hr {
+    border-top-width: thin;
+}
+
+.bootcamp-separator-thickness-medium hr {
+    border-top-width: medium;
+}
+
+.bootcamp-separator-thickness-thick hr {
+    border-top-width: thick;
+}
+
+.bootcamp-separator-thickness-max hr {
+    border-top-width: 10px;
+}
