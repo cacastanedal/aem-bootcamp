@@ -1,0 +1,26 @@
+<sly
+        data-sly-use.breadcrumb="com.aembootcamp.core.models.BreadcrumbModel"
+/>
+
+
+<nav class="cmp-breadcrumb" style="padding: 0 0 0 180px">
+    <ol class="cmp-breadcrumb__list">
+        <li data-sly-repeat.parentPage="${breadcrumb.parentPages}"
+            class="cmp-breadcrumb__item">
+
+            <a  href="${parentPage.path @extension='html'}" class="cmp-breadcrumb__item-link">
+                <span data-sly-test="${parentPage.navigationTitle}" itemprop="name">
+                    ${parentPage.navigationTitle}
+                </span>
+                <span data-sly-test="${!parentPage.navigationTitle && parentPage.pageTitle}" itemprop="name">
+                    ${parentPage.pageTitle}
+                </span>
+                <span data-sly-test="${!parentPage.navigationTitle && !parentPage.pageTitle}" itemprop="name">
+                    ${parentPage.title}
+                </span>
+            </a>
+            <meta itemprop="position" content="1">
+        </li>
+    </ol>
+</nav>
+<!-- Breadcrumb Component End -->

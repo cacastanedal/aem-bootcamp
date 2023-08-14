@@ -16,8 +16,11 @@ import org.slf4j.LoggerFactory;
 import org.apache.sling.api.resource.Resource;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,14 +36,32 @@ public class BreadcrumbModel {
   @SlingObject
   private ResourceResolver resourceResolver;
 
+  @Inject
+  private Page currentPage;
+
   public List<String> pageLists;
+
+  public List<Page> parentPages;
 
   public List<String> getPageLists(){
     return pageLists;
   }
 
+  public List<Page> getParentPages(){
+    return parentPages;
+  }
+
   @PostConstruct
   public void init(){
+    parentPages = new ArrayList<>();
+    Page nextPage = currentPage;
+
+    while(nextPage.getParent() != null){
+      parentPages.add(nextPage.getParent());
+      nextPage = nextPage.getParent();
+    }
+
+    Collections.reverse(parentPages);
 
     Session session = resourceResolver.adaptTo(Session.class);
     Map<String, String> queryPredicate = new HashMap<>();
