@@ -45,7 +45,9 @@ public class HeaderModel {
         ValueMap properties = childResource.adaptTo(ValueMap.class);
         String rootPath = properties.get("rootPath", String.class);
         Page navPage = resourceResolver.getResource(rootPath).adaptTo(Page.class);
-        headerNavigationItemsList.add(navPage);
+
+        if(!navPage.isHideInNav())
+          headerNavigationItemsList.add(navPage);
       }
     }
   }

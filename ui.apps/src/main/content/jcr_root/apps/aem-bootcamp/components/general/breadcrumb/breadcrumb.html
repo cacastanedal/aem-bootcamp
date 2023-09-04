@@ -1,13 +1,14 @@
 <sly
         data-sly-use.breadcrumb="com.aembootcamp.core.models.BreadcrumbModel"
+        data-sly-test.empty="${!breadcrumb.parentPages}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=empty}"
 />
 
 
 <nav class="cmp-breadcrumb" style="padding: 0 0 0 180px">
     <ol class="cmp-breadcrumb__list">
-        <li data-sly-repeat.parentPage="${breadcrumb.parentPages}"
-            class="cmp-breadcrumb__item">
-
+        <li data-sly-repeat.parentPage="${breadcrumb.parentPages}" class="cmp-breadcrumb__item">
             <a  href="${parentPage.path @extension='html'}" class="cmp-breadcrumb__item-link">
                 <span data-sly-test="${parentPage.navigationTitle}" itemprop="name">
                     ${parentPage.navigationTitle}

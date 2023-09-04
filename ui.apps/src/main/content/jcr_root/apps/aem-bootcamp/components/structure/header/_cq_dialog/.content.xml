@@ -30,6 +30,7 @@
                                             <file
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                allowUpload="{Boolean}false"
                                                 autoStart="{Boolean}true"
                                                 cq-msm-lockable="/file"
                                                 fieldLabel="Upload files"
@@ -93,7 +94,8 @@
                                                             fieldLabel="Root Path"
                                                             name="./rootPath"
                                                             required="{Boolean}true"
-                                                            rootPath="/content"/>
+                                                            rootPath="/content"
+                                                            validation="max-items-6"/>
                                                     </items>
                                                 </field>
                                             </navigations>
