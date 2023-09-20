@@ -1,24 +1,23 @@
 <div class="cmp-subscribe">
- <form method="post" action="">
- <div class="input-group">
- <label for="first-name">First Name:</label>
- <input id="first-name" type="text" name="First Name" />
- </div>
- <div class="input-group">
- <label for="last-name">Last Name:</label>
- <input id="last-name" type="text" name="Last Name"/>
- </div>
- <div class="input-group">
- <label for="email-id">Email Id:</label>
- <input id="email-id" type="email" name="Email Id"/>
- </div>
- <div class="input-group">
- <label for="article-type">Preferred Article Type: </label>
- <select name="article-type" id="article-type">
- <option value="demo-value">Demo Title</option>
- </select>
- </div>
- <button type="submit">Subscribe</button>
-
+ <form method="post" action="${currentNode}/jcr:content.subscription.txt">
+  <div class="input-group">
+   <label for="first-name">First Namesss:</label>
+   <input id="first-name" type="text" name="firstName" />
+  </div>
+  <div class="input-group">
+   <label for="last-name">Last Name:</label>
+   <input id="last-name" type="text" name="lastName"/>
+  </div>
+  <div class="input-group">
+   <label for="email-id">Email Id:</label>
+   <input id="email-id" type="email" name="emailId"/>
+  </div>
+  <div class="input-group">
+   <label for="article-type">Preferred Article Type: </label>
+   <select name="articleType" id="article-type">
+    <option value="demo-value">Demo Title</option>
+   </select>
+  </div>
+  <button type="submit">Subscribe</button>
  </form>
 </div>
