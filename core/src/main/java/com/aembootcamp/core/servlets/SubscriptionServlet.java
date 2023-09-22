@@ -22,6 +22,9 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.util.Optional;
 
 @Component(service = Servlet.class)
 @SlingServletResourceTypes(
@@ -45,6 +48,9 @@ public class SubscriptionServlet extends SlingAllMethodsServlet {
   @Override
   protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
     throws ServletException, IOException {
+
+    String redirectURL = getRedirectURL(request);
+
     try{
       LOG.info("\n ---------------------------STARTED POST-----------------------------");
       for(RequestParameter requestParameter : request.getRequestParameterList()){
@@ -53,8 +59,13 @@ public class SubscriptionServlet extends SlingAllMethodsServlet {
     } catch (Exception e){
       LOG.info("\n ERROR IN REQUEST {}", e.getMessage());
     } finally {
-      response.getWriter().write("========FORM SUBMITTED==========");
+      response.sendRedirect(String.format("%s.html", redirectURL));
     }
+  }
+
+  private String getRedirectURL(SlingHttpServletRequest request){
+    return Optional.ofNullable(request.getRequestParameter("redirectURL"))
+      .orElseThrow(() -> new NoSuchElementException("No URL found to redirect")).getString();
   }
 
 }

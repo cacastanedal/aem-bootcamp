@@ -1,23 +1,33 @@
+<sly
+        data-sly-use.subscription="com.aembootcamp.core.models.SubscriptionModel"
+        data-sly-test.empty="${!subscription.redirectURL}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=empty}"
+/>
+
 <div class="cmp-subscribe">
- <form method="post" action="${currentNode}/jcr:content.subscription.txt">
-  <div class="input-group">
-   <label for="first-name">First Namesss:</label>
-   <input id="first-name" type="text" name="firstName" />
-  </div>
-  <div class="input-group">
-   <label for="last-name">Last Name:</label>
-   <input id="last-name" type="text" name="lastName"/>
-  </div>
-  <div class="input-group">
-   <label for="email-id">Email Id:</label>
-   <input id="email-id" type="email" name="emailId"/>
-  </div>
-  <div class="input-group">
-   <label for="article-type">Preferred Article Type: </label>
-   <select name="articleType" id="article-type">
-    <option value="demo-value">Demo Title</option>
-   </select>
-  </div>
-  <button type="submit">Subscribe</button>
- </form>
+    <form method="post" action="/content/aem-bootcamp/us/en/HomePage2/subscription-page/jcr:content.subscription.txt">
+        <div class="input-group">
+            <label for="first-name">First Namesss:</label>
+            <input id="first-name" type="text" name="firstName"/>
+        </div>
+        <div class="input-group">
+            <label for="last-name">Last Name:</label>
+            <input id="last-name" type="text" name="lastName"/>
+        </div>
+        <div class="input-group">
+            <label for="email-id">Email Id:</label>
+            <input id="email-id" type="email" name="emailId"/>
+        </div>
+        <div class="input-group">
+            <label for="article-type">Preferred Article Type: </label>
+            <select  name="articleType" id="article-type">
+                <option data-sly-repeat.subscriptionTag="${subscription.pageTags}" value="${subscriptionTag}">${subscriptionTag}</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <input type="hidden" id="redirectURL" name="redirectURL", value="${subscription.redirectURL}">
+        </div>
+        <button type="submit">Subscribe</button>
+    </form>
 </div>
