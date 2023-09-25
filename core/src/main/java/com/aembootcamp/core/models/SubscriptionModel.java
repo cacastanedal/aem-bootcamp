@@ -23,9 +23,6 @@ public class SubscriptionModel {
 
   @Inject
   private Page currentPage;
-
-  // page tags
-  // redirect URL
   @ValueMapValue(name = "linkURL")
   private String redirectURL;
 
