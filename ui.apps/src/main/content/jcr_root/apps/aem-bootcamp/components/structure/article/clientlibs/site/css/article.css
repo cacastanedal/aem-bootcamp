@@ -1,0 +1,11 @@
+.horizontal-list {
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+}
+
+.horizontal-list li {
+  display: inline-block; 
+  margin-right: 10px;
+  color: #FF928B;
+}

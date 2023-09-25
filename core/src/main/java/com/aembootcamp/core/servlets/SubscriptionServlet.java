@@ -51,10 +51,11 @@ public class SubscriptionServlet extends SlingAllMethodsServlet {
     String email = request.getRequestParameter("emailId").getString();
     String firstName = request.getRequestParameter("firstName").getString();
     String lastName = request.getRequestParameter("lastName").getString();
+    String article = request.getRequestParameter("articleType").getString();
 
-    subscriptionService.saveUserSubscription(email, firstName, lastName, resourceResolver);
+    subscriptionService.saveUserSubscription(email, firstName, lastName, article, resourceResolver);
 
-    response.sendRedirect(String.format("%s.html", getRedirectURL(request)));
+    response.sendRedirect(String.format("/%s.html", getRedirectURL(request)));
 
   }
 

@@ -5,12 +5,14 @@
     data-sly-call="${template.placeholder @ isEmpty=empty}"
     />
 
+<ul class="horizontal-list" >
+    <li data-sly-repeat.tagName="${article.tags}">${tagName}</li>
+</ul>
+
 <div data-sly-resource="${@ path='.', resourceType='core/wcm/components/title/v2/title'}"></div>
 <div data-sly-resource="${@ path ='.', resourceType='core/wcm/components/text/v2/text'}"></div>
 <div data-sly-resource="${@ path ='.', resourceType='core/wcm/components/image/v2/image'}"></div>
 
-<ul>
-    <li data-sly-repeat.tagName="${article.tags}"> ${tagName} </li>
-</ul>
+
 
 
